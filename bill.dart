@@ -21,25 +21,23 @@ void main() {
 
   double discount = 0;
 
-  // Apply discount
-  if (totalBill >= 10000) {
-    discount = 20;
-  } else if (totalBill >= 5000) {
-    discount = 10;
-  } else {
-    discount = 0;
-  }
-
   double discountAmount = totalBill * discount / 100;
 
   double finalBill = totalBill - discountAmount;
 
-  // Additional member discount
-  if (isMember && finalBill > 5000) {
-    double memberDiscount = finalBill * 5 / 100;
+  // Apply discount
+  if (totalBill >= 10000) {
+    discount = 20;
 
-    finalBill = finalBill - memberDiscount;
-    discountAmount = discountAmount + memberDiscount;
+    if (isMember && finalBill > 5000) {
+      double memberDiscount = finalBill * 5 / 100;
+      finalBill = finalBill - memberDiscount;
+      discountAmount = discountAmount + memberDiscount;
+    }
+  } else if (totalBill >= 5000) {
+    discount = 10;
+  } else {
+    discount = 0;
   }
 
   // Print bill
