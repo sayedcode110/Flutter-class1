@@ -1,27 +1,34 @@
-import 'dart.io';
+import 'dart:io';
 
-void main(){
-   print ("Cheeze Bager");
-   print ("Cheeze Pizza");
-   print ("Masala Frise");
-   print ("Biryani");
-   print ("Select For 1 Dish")        
+void main() {
+  print("1. Cheese Burger");
+  print("2. Cheese Pizza");
+  print("3. Masala Fries");
+  print("4. Biryani");
 
-   String input = stdin.readLineSync()!;
+  print("Select For 1 Dish:");
 
-   switch(){
+  String input = stdin.readLineSync()!;
+  int choice = int.parse(input);
+
+  switch (choice) {
     case 1:
-    print ("Cheeze Bager");
+      print("Cheese Burger");
+      break;
+
     case 2:
-    print ("Cheeze Pizza");
+      print("Cheese Pizza");
+      break;
+
     case 3:
-    print ("Masala Frise");
+      print("Masala Fries");
+      break;
+
     case 4:
-    print ("Biryani");
-    case 5:
-    
+      print("Biryani");
+      break;
 
-
-   }
-
+    default:
+      print("Invalid Choice");
+  }
 }
