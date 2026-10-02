@@ -65,11 +65,19 @@
 //   sbi.calculateCharges();
 // }
 
-int sum(int a, int b, [int c = 0, int d = 0]) {
-  return a + b + c + d;
+// // int sum(int a, int b, [int c = 0, int d = 0]) {
+// //   return a + b + c + d;
+// // }
+
+// // void main() {
+// //   print(sum(2, 3));
+// //   print(sum( 3, 4));
+// // }
+
+class Student {
+  String? _name;
 }
 
 void main() {
-  print(sum(2, 3));
-  print(sum(3, 4));
+  Student std2 = Student();
 }
